@@ -1,0 +1,34 @@
+@import './var';
+@import './mixin';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: black;
+    @include font ($aling:center, $fontSize:5rem);
+}
+
+.flex {
+    @include flex ($direction: row, $aling:center);
+    position: relative;
+    top: 18vw;
+    left: 20%;
+    width: 40%;
+}
+
+.block {
+    @include padd($padding);
+    @include shadowAndLight($color: rgb(60, 10, 80), $shine:rgb(121, 16, 163))
+}
+
+.hours {
+    background-color: rgb(130, 105, 243);
+}
+
+.block:not(.hours) {
+    background-color: rgb(65, 21, 168);
+}

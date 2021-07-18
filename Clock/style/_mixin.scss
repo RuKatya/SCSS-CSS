@@ -1,0 +1,23 @@
+@import './var';
+
+@mixin font ($aling : left, $fontSize: 2rem) {
+    font-size: $fontSize;
+    font-weight: bold;
+    color: white;
+    text-align: $aling;
+}
+
+@mixin flex ($direction: column, $aling: left) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $aling;
+}
+
+@mixin padd ($padd...) {
+    padding: $padd;
+}
+
+@mixin shadowAndLight ($color: none, $shine:none) {
+    box-shadow: 0px 0px 50px 10px $color, 0px 0px 100px $shine;
+
+}
